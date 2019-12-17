@@ -36,7 +36,7 @@
 <script type="text/javascript" src="./ueditor/Topic-ueditor.config.js"></script>
 <!-- 编辑器源码文件 -->
 <script type="text/javascript" src="./ueditor/ueditor.all.js"></script>
-<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+<!-- 语言包文件 -->
 <script type="text/javascript" src="./ueditor/lang/zh-cn/zh-cn.js"></script>
 
 
@@ -270,7 +270,7 @@
 								type="button" value="取消" class="butt"
 								onclick="if(window.confirm('你确定要取消吗？')){history.go(-1);};" />
 								<ol class="notice">
-									<li>发表帖子，表示您接受了猿来入此Java学习交流论坛的用户<a href="" target="_blank">行为准则</a>。</li>
+									<li>发表帖子，表示您接受了本JavaWeb学习交流论坛的用户<a href="" target="_blank">行为准则</a>。</li>
 									<li>请对您的言行负责，并遵守中华人民共和国有关法律法规,尊重网上道德。</li>
 									<li>转载文章请注明出处。如是商业用途请联系原作者。</li>
 								</ol></td>
