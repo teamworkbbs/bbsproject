@@ -35,7 +35,7 @@
 <script type="text/javascript" src="./ueditor/Topic-ueditor.config.js"></script>
 <!-- 编辑器源码文件 -->
 <script type="text/javascript" src="./ueditor/ueditor.all.js"></script>
-<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+<!-- 语言包文件 -->
 <script type="text/javascript" src="./ueditor/lang/zh-cn/zh-cn.js"></script>
 
 
@@ -51,19 +51,19 @@
 		var userGrade = <%=user.getUsersGrade().getId()%>
 		var allowTopGrade = userGrade *100;
 		if (topTitle == "" || topTitle == null) {
-			alert("请填写文章标题!");
+			alert("请填写文章标题~");
 			return false;
 		}else if(editor.getContent().replace(/(&nbsp;)|\s|\u00a0/g, '')==""||editor.getContent().replace(/(&nbsp;)|\s|\u00a0/g, '')==null){
-			alert("文章内容不能为空！");
+			alert("文章内容不能为空~");
 			return false;
 		} else if (editor.getContentLength(true) < 10) {
-			alert("文章内容不得少于10个字符！");
+			alert("文章内容不得少于10个字符~");
 			return false;
 		} else if (topCate == 0) {
-			alert("请选择大版块！");
+			alert("请选择大版块~");
 			return false;
 		} else if (topType == 0) {
-			alert("请选择小版块！");
+			alert("请选择小版块~");
 			return false;
 		}
 		else if (topGrade == "" || topGrade ==null) {
@@ -269,9 +269,9 @@
 								type="button" value="取消" class="butt"
 								onclick="if(window.confirm('你确定要取消吗？')){history.go(-1);};" />
 								<ol class="notice">
-									<li>这里发言，表示您接受了猿来入此Java学习交流论坛的用户<a href="" target="_blank">行为准则</a>。</li>
+									<li>这里发言，表示您接受了本JavaWeb学习交流论坛的用户行为准则</a>。</li>
 									<li>请对您的言行负责，并遵守中华人民共和国有关法律法规,尊重网上道德。</li>
-									<li>转载文章请注明出自“猿来入此”。如是商业用途请联系原作者。</li>
+									<li>转载文章请注明出处。如是商业用途请联系原作者。</li>
 								</ol></td>
 						</tr>
 					</table>
