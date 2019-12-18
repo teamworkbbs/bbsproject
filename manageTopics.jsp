@@ -13,7 +13,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>帮助管理</title>
+<title>帖子管理</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,6 @@
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
 <link rel="stylesheet" href="./CSS/manage.css" />
-<script type="text/javascript" src="./JS/jquery-1.11.0.js"></script>
 <style type="text/css">
 body,html {
 	width: 1004px;
@@ -82,50 +81,48 @@ table tr td {
 	padding-left: 3px;
 }
 
-.helpStyle {
+.topicStyle {
 	width: 790px;
 	margin-left: 10px;
 	margin-right: 5px;
 }
 
-.helpStyle a:link,.helpStyle a:visited {
+.topicStyle a:link,.topicStyle a:visited {
 	color: blue;
 	text-decoration: none;
 } /* 未被访问的链接 */ /*已被访问的链接 */
-.helpStyle a:hover {
+.topicStyle a:hover {
 	color: #2979BF;
 	font-weight: bolder;
 	text-decoration: none;
 } /* 鼠标指针移动到链接上 */
-.butt {
-	background-color: #99CCCC;
-	width: 120px;
-	height: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border: 0;
-	color: white;
-	font-size: 18px;
-	border: 0;
-}
-
-.butt:hover {
-	background-color: #7A91A7;
-	border: 0;
-}
 </style>
+<script type="text/javascript" src="./JS/jquery-1.11.0.js"></script>
 <script type="text/javascript">
 	function goPage() {
 		var currentPage = parseInt($("#currentPage").val());
 		var selectedPage = parseInt($("#selectPage").val());
 		if (selectedPage != 0 && selectedPage != currentPage) {
-			document.goPageForm.action = "help_ManageAll.action?nowPage="
+			document.goPageForm.action = "topic_ManageAll.action?nowPage="
 					+ selectedPage;
 			goPageForm.submit();
 		}
 
 	}
-	function checkDelete() {
+	function nice() {
+		if (confirm("此操作将推荐该帖为精品，你确认要进行操作吗？")) {
+			return true;
+		}
+		return false;
+	}
+	function unNice() {
+		if (confirm("此操作将取消推荐该帖为精品，你确认要进行操作吗？")) {
+			return true;
+		}
+		return false;
+	}
+	function checkDelete()
+	{
 		alert("不能进行此操作！");
 		return false;
 	}
@@ -151,11 +148,9 @@ table tr td {
 			<jsp:include page="./left.jsp"></jsp:include>
 		</div>
 		<div class="right">
-			<div align="center" style="font-size: 24px;margin-top: 10px;">帮
-				助 管 理</div>
-			<div style="float: left;width:100px;margin-left: 10px;">
-				<input type="submit" value="发表" class="butt" style="width: 80px;"
-					onclick="window.location.href='a/addHelp.jsp'" />
+			<div align="center" style="font-size: 24px;margin-top: 10px;">
+				帖 子 管 理<font style="font-size: 14px;">(共有<s:property
+						value="pageBean.allRecords" />帖子)</font>
 			</div>
 			<div class="pageNav" align="right">
 				<s:iterator value="pageBean">
@@ -169,17 +164,17 @@ table tr td {
 						<s:if test="currentPage==1">
 							<button disabled="disabled" style="width: 80px;">上一页</button>
 							<button disabled="disabled">1</button>
-							<a href="help_ManageAll.action?nowPage=2"><button>2</button>
+							<a href="topic_ManageAll.action?nowPage=2"><button>2</button>
 							</a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 									style="width: 80px;">下一页</button> </a>
 						</s:if>
 						<s:elseif test="currentPage==2">
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 									style="width: 80px;">上一页</button> </a>
-							<a href="help_ManageAll.action?nowPage=1"><button>1</button>
+							<a href="topic_ManageAll.action?nowPage=1"><button>1</button>
 							</a>
 							<button disabled="disabled">2</button>
 							<button disabled="disabled" style="width: 80px;">下一页</button>
@@ -189,34 +184,34 @@ table tr td {
 						<s:if test="currentPage==1">
 							<button disabled="disabled" style="width: 80px;">上一页</button>
 							<button disabled="disabled">1</button>
-							<a href="help_ManageAll.action?nowPage=2"><button>2</button>
+							<a href="topic_ManageAll.action?nowPage=2"><button>2</button>
 							</a>
-							<a href="help_ManageAll.action?nowPage=3"><button>3</button>
+							<a href="topic_ManageAll.action?nowPage=3"><button>3</button>
 							</a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 									style="width: 80px;">下一页</button> </a>
 						</s:if>
 						<s:elseif test="currentPage==2">
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 									style="width: 80px;">上一页</button> </a>
-							<a href="help_ManageAll.action?nowPage=1"><button>1</button>
+							<a href="topic_ManageAll.action?nowPage=1"><button>1</button>
 							</a>
 							<button disabled="disabled">2</button>
-							<a href="help_ManageAll.action?nowPage=3"><button>3</button>
+							<a href="topic_ManageAll.action?nowPage=3"><button>3</button>
 							</a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 									style="width: 80px;">下一页</button> </a>
 						</s:elseif>
 						<s:elseif test="currentPage==3">
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 									style="width: 80px;">上一页</button> </a>
-							<a href="help_ManageAll.action?nowPage=1"><button>1</button>
+							<a href="topic_ManageAll.action?nowPage=1"><button>1</button>
 							</a>
-							<a href="help_ManageAll.action?nowPage=2"><button>2</button>
+							<a href="topic_ManageAll.action?nowPage=2"><button>2</button>
 							</a>
 							<button disabled="disabled">3</button>
 							<button disabled="disabled" style="width: 80px;">下一页</button>
@@ -226,22 +221,22 @@ table tr td {
 						<s:if test="%{currentPage==1}">
 							<button disabled="disabled" style="width: 80px;">上一页</button>
 							<button disabled="disabled">1</button>
-							<a href="help_ManageAll.action?nowPage=2"><button>2</button>
+							<a href="topic_ManageAll.action?nowPage=2"><button>2</button>
 							</a>
 							<a><button disabled="disabled">...</button> </a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{totalPages}" />"><button>
+								href="topic_ManageAll.action?nowPage=<s:property value="%{totalPages}" />"><button>
 									<s:property value="%{totalPages}" />
 								</button> </a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 									style="width: 80px;">下一页</button> </a>
 						</s:if>
 						<s:elseif test="%{currentPage<totalPages}">
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 									style="width: 80px;">上一页</button> </a>
-							<a href="help_ManageAll.action?nowPage=1"><button>1</button>
+							<a href="topic_ManageAll.action?nowPage=1"><button>1</button>
 							</a>
 							<s:if test="%{currentPage>2}">
 								<a><button disabled="disabled">...</button> </a>
@@ -253,22 +248,22 @@ table tr td {
 								<a><button disabled="disabled">...</button> </a>
 							</s:if>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{totalPages}" />"><button>
+								href="topic_ManageAll.action?nowPage=<s:property value="%{totalPages}" />"><button>
 									<s:property value="%{totalPages}" />
 								</button> </a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 									style="width: 80px;" style="width: 80px;">下一页</button> </a>
 						</s:elseif>
 						<s:elseif test="%{currentPage==totalPages}">
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+								href="topic_ManageAll.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 									style="width: 80px;">上一页</button> </a>
-							<a href="help_ManageAll.action?nowPage=1"><button>1</button>
+							<a href="topic_ManageAll.action?nowPage=1"><button>1</button>
 							</a>
 							<a><button disabled="disabled">...</button> </a>
 							<a
-								href="help_ManageAll.action?nowPage=<s:property value="%{totalPages-1}" />"><button>
+								href="topic_ManageAll.action?nowPage=<s:property value="%{totalPages-1}" />"><button>
 									<s:property value="%{totalPages-1}" />
 								</button> </a>
 							<button disabled="disabled">
@@ -280,12 +275,13 @@ table tr td {
 				</s:iterator>
 			</div>
 			<div class="pageGo" align="right">
-				<form action="help_ManageAll.action" method="post" name="goPageForm">
+				<form action="topic_ManageAll.action" method="post"
+					name="goPageForm">
 					<input type="text" id="currentPage"
 						value="<s:property value="pageBean.currentPage" />"
 						style="display: none"> 第 <select onchange="goPage();"
 						id="selectPage"
-						style="width:70px;height:24px;border-radihelp:0;border: 1px solid silver;">
+						style="width:70px;height:24px;border-radius:0;border: 1px solid silver;">
 						<option value="0">请选择</option>
 						<%
 							int i = 1;
@@ -301,28 +297,48 @@ table tr td {
 					</select> 页
 				</form>
 			</div>
-			<table class="helpStyle" cellspacing="0">
-				<tr style="background-color: #99CCCC;height: 24px;">
-					<td width="400px">标题</td>
-					<td width="150px">时间</td>
+			<table class="topicStyle" cellspacing="0">
+				<tr style="background-color: #99CCCC;height: 26px;">
+					<td width="220px">标题</td>
+					<td width="120px">类型</td>
+					<td width="120px">作者</td>
+					<td width="30px">评论</td>
+					<td width="40px">状态</td>
+					<td width="30px">精品</td>
 					<td>操作</td>
-					<td>管理</td>
+					<td width="120px">管理</td>
 				</tr>
-				<s:iterator value="listHelp" var="help">
-					<tr style="height:26px">
-						<td style="border-left: 1px solid silver;"><div
-								style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 400px;">
-								<s:property value="#help.title" />
-							</div>
+				<s:iterator value="listTopic" var="topic">
+					<tr style="height: 26px;">
+						<td style="text-align: left;border-left: 1px solid silver;"><div
+								style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 220px;">
+								<s:property value="#topic.title" />
+							</div></td>
+						<td style="font-size: 12px;"><s:property
+								value="#topic.topicsType.name" />-<s:property
+								value="#topic.topicsType.typesCategory.name" /></td>
+						<td><s:property value="#topic.topicsUser.nickname" /></td>
+						<td><s:property value="#topic.countComment" />
 						</td>
-						<td><s:date name="#help.newtime" format="yyyy-MM-dd HH:mm" />
+						<td style="font-size: 12px;"><s:if test="#topic.status==0">未结帖</s:if>
+							<s:else>已结帖</s:else></td>
+						<td><s:if test="#topic.niceTopic==0">否</s:if> <s:else>是</s:else>
 						</td>
 						<td style="font-size: 12px;color: blue;"><a
-							href="help_getAll.action?helpId=<s:property value="#help.id" />"
-							target="_top">查看详细&gt;&gt;</a>
+							href="topic_goTopic.action?topic.id=<s:property
+								value="#topic.id" />">查看详细&gt;&gt;</a>
 						</td>
-						<td><a style="color: silver;"
-							onclick="return checkDelete()">删除</a></td>
+						<td style="color: blue;"><s:if test="#topic.niceTopic==0">
+								<a style="color: red" onclick="return nice()"
+									href="topic_ManageNice.action?topic.id=<s:property
+								value="#topic.id" />">推荐精品</a>
+							</s:if> <s:else>
+								<a onclick="return unNice()"
+									href="topic_ManageUnNice.action?topic.id=<s:property
+								value="#topic.id" />">取消精品</a>
+							</s:else>&nbsp;&nbsp;&nbsp;&nbsp;<a style="color: silver;"
+							onclick="return checkDelete()">删除</a>
+						</td>
 					</tr>
 
 				</s:iterator>
