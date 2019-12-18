@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.chen.bean.Users" table="t_user"
+	<class name="com.bbs.bean.Users" table="t_user"
 		batch-size="5">
 		<id name="id" column="id" type="int">
 			<generator class="increment" />
