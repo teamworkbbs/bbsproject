@@ -249,11 +249,11 @@
 											style="height:26px;width: 150px;font-size:14px"
 											id="selectType" name="ttype.id">
 												<option value="0">--请选择小版块--</option>
-                                            <s:iterator value="listType" id="type">
-                                                <option value='<s:property value="#type.id" />'>
-                                                    <s:property value="#type.name" />
-                                                </option>
-                                            </s:iterator>
+											<s:iterator value="listType" id="type">
+												<option value='<s:property value="#type.id" />'>
+													<s:property value="#type.name" />
+												</option>
+											</s:iterator>
 										</select>
 										</td>
 									</tr>
