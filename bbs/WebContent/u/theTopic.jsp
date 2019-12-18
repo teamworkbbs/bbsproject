@@ -28,7 +28,7 @@
 <script type="text/javascript" src="./ueditor/Comment-ueditor.config.js"></script>
 <!-- 编辑器源码文件 -->
 <script type="text/javascript" src="./ueditor/ueditor.all.js"></script>
-<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+<!-- 语言包文件 -->
 <script type="text/javascript" src="./ueditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="./JS/jquery-1.11.0.js"></script>
 <script type="text/javascript" language="javascript">
@@ -98,12 +98,12 @@
 		} else if (topic_user_id == current_user_id) {
 			window.location.href = "topic_GoEnd.action?topic.id=" + topic_id;
 		} else if (topic_user_id != current_user_id) {
-			alert("您的账号不对，请切换账号登录!");
+			alert("您的账号有误，请切换账号登录!");
 		}
 	}
 	function deleteComment(commentId) {
 		var topic_id = $("#topicId").val();
-		if (confirm("删除是不可恢复的，你确认要删除吗？")) {
+		if (confirm("删除后评论不会回复，确认要删除该评论吗？")) {
 			window.location.href = "comment_Delete.action?comment.id="
 					+ commentId+"&&topic.id="+topic_id;
 			return true;
@@ -596,7 +596,7 @@
 									<a
 										href="user_GoUser.action?user.id=<s:property
 										value="#u.id" />"><s:property
-											value="#u.nickname" /> </a> <br />
+											value="#u.nickname" /> </a> <br/>
 									<s:property value="#u.usersGrade.id" />
 									:
 									<s:property value="#u.usersGrade.honor" />
@@ -838,7 +838,7 @@
 						align="left">
 						<input type="submit" value="发表评论" class="butt"
 							onclick="return validComment();"
-							style="margin-top: 10px;margin-left: 20" /><font size="2px;">提示：请不要恶意灌水！谢谢！</font>
+							style="margin-top: 10px;margin-left: 20px" /><font size="1px;">提示：请勿发布恶意评论！谢谢！</font>
 					</div>
 				</form>
 			</div>
