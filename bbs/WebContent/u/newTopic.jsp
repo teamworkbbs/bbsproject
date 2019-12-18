@@ -249,6 +249,11 @@
 											style="height:26px;width: 150px;font-size:14px"
 											id="selectType" name="ttype.id">
 												<option value="0">--请选择小版块--</option>
+                                            <s:iterator value="listType" id="type">
+                                                <option value='<s:property value="#type.id" />'>
+                                                    <s:property value="#type.name" />
+                                                </option>
+                                            </s:iterator>
 										</select>
 										</td>
 									</tr>
@@ -258,9 +263,9 @@
 							<th align="center" style="height: 40px;">帖子分数</th>
 							<td>&nbsp;给分<input type="text" id="tGrade"
 								name="topic.integral"
-								style="width: 40px;height: 30px;padding-left: 6px;" />&nbsp;(5-<%=user.getUsersGrade().getId() * 100%>)&nbsp;&nbsp;当前可用分:
+								style="width: 40px;height: 30px;padding-left: 6px;" />&nbsp;(5-<%=user.getUsersGrade().getId() * 100%>)&nbsp;&nbsp;当前可用积分:
 								<s:property value="#session.tu.integral" />&nbsp;&nbsp;<span
-								style="margin-left: 5px;color:red">结帖后系统返还本帖50%的可用分！</span></td>
+								style="margin-left: 5px;color:red">结帖后将返还本帖50%的可用积分！</span></td>
 						</tr>
 						<tr>
 							<th style="height: 180px;">&nbsp;</th>

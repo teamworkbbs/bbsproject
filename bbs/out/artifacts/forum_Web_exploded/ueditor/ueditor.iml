@@ -7,7 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jsp" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="jsp" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="ueditor" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="jsp1" level="project" />
   </component>
 </module>
