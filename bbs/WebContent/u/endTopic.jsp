@@ -95,7 +95,7 @@
 }
 
 .butt {
-	background-color: #6699CC;
+	background-color: #99CCCC;
 	width: 100px;
 	height: 30px;
 	margin-right: 10px;
@@ -106,7 +106,7 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 
@@ -115,7 +115,7 @@
 	height: 40px;
 	line-height: 40px;
 	margin-top: 15px;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 	float: left;
 	text-align: left;
 }
@@ -125,7 +125,7 @@
 	width: 958px;
 	min-height: 300px;
 	background-color: #EFF4FB;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 }
 
 .userInfo {
@@ -140,7 +140,7 @@
 	width: 958px;
 	/* 	min-height: 50px; */
 	background-color: #EFF4FB;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 	font-family: 微软雅黑;
 }
 
@@ -228,12 +228,7 @@
 					&nbsp;&gt;&nbsp;<a>论坛</a>&nbsp;&gt;&nbsp;<a>发帖</a>
 				</div>
 			</div>
-			<div class="editMenu">
-				<input type="button" value="确认结帖" onclick="endTopic();" class="butt" />
-				<input type="button" value="取消" onclick="history.go(-1)"
-					class="butt" />
-			</div>
-
+			
 			<div class="titleStyle" align="left">
 				<div style="width:800px;float: left;font-size: 13px; ">
 					&nbsp; <font style="font-size: 13px;color: white"><s:if
@@ -354,4 +349,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
