@@ -63,7 +63,7 @@
 }
 
 .topicTitle:hover {
-	color: #2C86E5;
+	color: #509E88;
 	text-decoration: underline;
 }
 
@@ -98,7 +98,7 @@
 	height: 30px;
 	font-size: 14px;
 	font-family: 微软雅黑;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 	border: 1px solid silver;
 }
 
@@ -114,7 +114,7 @@
 .listNewStyle {
 	background-color: white;
 	margin-bottom: 10px;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 }
 
 .listNewStyle a:link,.listNewStyle a:visited {
@@ -122,7 +122,7 @@
 	text-decoration: none;
 } /* 未被访问的链接 */ /*已被访问的链接 */
 .listNewStyle a:hover {
-	color: #2979BF;
+	color: #509E88;
 	font-weight: bolder;
 	text-decoration: none;
 } /* 鼠标指针移动到链接上 */
