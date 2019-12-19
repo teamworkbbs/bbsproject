@@ -63,7 +63,7 @@
 }
 
 .topicTitle:hover {
-	color: #2C86E5;
+	color: #509E88;
 	text-decoration: underline;
 }
 
@@ -98,7 +98,7 @@
 	height: 30px;
 	font-size: 14px;
 	font-family: 微软雅黑;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 	border: 1px solid silver;
 }
 
@@ -114,7 +114,7 @@
 .listTopicStyle {
 	background-color: white;
 	margin-bottom: 10px;
-	border: 1px solid #C2D5E3;
+	border: 1px solid CAD9E3;
 }
 
 .listTopicStyle a:link,.listTopicStyle a:visited {
@@ -122,7 +122,7 @@
 	text-decoration: none;
 } /* 未被访问的链接 */ /*已被访问的链接 */
 .listTopicStyle a:hover {
-	color: #2979BF;
+	color: #509E88;
 	font-weight: bolder;
 	text-decoration: none;
 } /* 鼠标指针移动到链接上 */
@@ -130,13 +130,13 @@
 <div class="background">
 	<div style="min-height: 350px;">
 		<s:if test="listTopic.size()==0">
-			<h1 align="center" style="color: #6699CC">暂无帖子</h1>
+			<h1 align="center" style="color: #99CCCC">暂无帖子</h1>
 		</s:if>
 		<s:iterator value="listTopic" id="topic">
 			<table class="listTopicStyle">
 				<tr>
 					<td
-						style="border-bottom: 1px solid #C2D5E3;background-color: #EFF4FB;width:750px;height: 20px">
+						style="border-bottom: 1px solid CAD9E3;background-color: #EFF4FB;width:750px;height: 20px">
 						<div style="width: 400px;text-align: left;float: left;">
 							<font style="font-size: 12px;color: #817E7E;">&nbsp;状态：</font> <font
 								style="font-size: 14px;color: red;"><s:if
