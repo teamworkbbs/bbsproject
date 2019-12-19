@@ -30,7 +30,7 @@
 			<interceptor-ref name="defaultStack" />
 		</action>
 		<action name="cate_ManageAllType" class="CategoryAction"
-			method="ManageAllType">
+				method="ManageAllType">
 			<result name="cate_manageAllType_ok_json" type="json">
 				<param name="includeProperties">listType.*,category.*</param>
 			</result>
@@ -46,7 +46,7 @@
 			<interceptor name="userAuthority" class="com.chen.interceptor.UserInterceptor"></interceptor>
 			<interceptor name="adminAuthority" class="com.chen.interceptor.AdminInterceptor"></interceptor>
 			<interceptor name="superAdminAuthority"
-				class="com.chen.interceptor.SuperAdminInterceptor"></interceptor>
+						 class="com.chen.interceptor.SuperAdminInterceptor"></interceptor>
 		</interceptors>
 		<global-results>
 			<result name="login">/login.jsp</result>
@@ -58,6 +58,9 @@
 			<!-- 用户登录返回结果处理 -->
 			<result name="user_login_ok" type="redirect">/index.jsp</result>
 			<result name="login_error">/error.jsp</result>
+			<result name="user_register_error">/error.jsp</result>
+			<result name="user_findpsd_error">/error.jsp</result>
+			<result name="user_findpsd_ok">/login.jsp</result>
 			<result name="user_register_ok" type="redirect">/index.jsp</result>
 			<result name="user_logout_ok" type="redirect">/login.jsp</result>
 			<result name="user_goUser_ok">/user.jsp</result>

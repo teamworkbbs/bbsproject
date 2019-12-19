@@ -1,13 +1,9 @@
-/**
- *
- */
 package com.bbs.dao;
 
 import java.util.List;
 
 import com.bbs.bean.Topics;
 import com.bbs.bean.Users;
-
 
 public interface UserDao {
     /**
@@ -51,6 +47,14 @@ public interface UserDao {
     public Users findByNP(Users user);
 
     /**
+     * 通过用户名和邮箱查找是否存在该用户
+     *
+     * @param user
+     * @return
+     */
+    public Users findByNE(Users user);
+
+    /**
      * 通过用户名查找是否存在该用户
      *
      * @param userName
@@ -65,3 +69,4 @@ public interface UserDao {
      */
     public List<Topics> getToipcs(int id);
 }
+
