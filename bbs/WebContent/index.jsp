@@ -15,9 +15,9 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="chen-Java,Java学习交流论坛,Java论坛,论坛">
+<meta http-equiv="keywords" content="JavaWeb,JavaWeb学习交流论坛,JavaWeb论坛,论坛">
 <meta http-equiv="description"
-	content="Java学习交流论坛为软件开发者（特别是Java软件开发者）提供了互相交流互相学习的网络平台。">
+	content="JavaWeb学习交流论坛为初学者和技术人员提供了互相交流互相学习的网络平台。">
 <link rel="stylesheet" type="text/css" href="./CSS/index.css">
 <script type="text/javascript" src="./JS/jquery-1.11.0.js"></script>
 <script type="text/javascript">
@@ -145,7 +145,8 @@ body,html {
 					</div>
 				</div>
 			</div>
-			
+			<div class="rightBody">
+				
 				<div class="newButton">
 					<form action="cate_new_getAll.action" method="get"
 						onsubmit="return checkLogin();">
