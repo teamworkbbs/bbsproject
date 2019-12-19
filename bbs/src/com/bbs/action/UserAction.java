@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.bbs.action;
 
 import java.util.List;
@@ -21,10 +18,6 @@ import com.bbs.bean.Users;
 import com.bbs.service.UserService;
 import com.bbs.util.ResponseUtil;
 
-/**
- * @author chenguoji
- * @email chenguo_ji@163.com
- */
 public class UserAction {
 	private UserService userService;
 	private Users user;
@@ -71,19 +64,42 @@ public class UserAction {
 
 	/**
 	 * 用户注册
-	 * 
+	 *
 	 * @return
 	 */
 	public String Register() throws Exception {
 		if (this.userService.add(user)) {
 			return "user_register_ok";
 		}
-		return "register_error";
+		else {
+			String message = "注册失败！";
+			request.setAttribute("tipMessage", message);
+			return "user_register_error";
+		}
 	}
 
 	/**
+	 * 用户找回密码
+	 *
+	 * @return
+	 */
+	public String Findpsd() throws Exception {
+		Users u=userService.findByNE(user);
+		if(u!=null) {
+			String message = u.getPassword();
+			System.out.println(u.getPassword() +" ; " +message);
+			request.setAttribute("tipMessage", message);
+			return "user_findpsd_ok";
+		}
+		else{
+			String message = "用户名或邮箱错误！";
+			request.setAttribute("tipMessage", message);
+			return "user_findpsd_error";
+		}
+	}
+	/**
 	 * 用户登录
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -114,7 +130,7 @@ public class UserAction {
 
 	/**
 	 * 用户注销
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -132,7 +148,7 @@ public class UserAction {
 
 	/**
 	 * 获取用户所有帖子
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -146,7 +162,7 @@ public class UserAction {
 
 	/**
 	 * 获取用户所有评论
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -216,7 +232,7 @@ public class UserAction {
 
 	/**
 	 * 封号
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -227,7 +243,7 @@ public class UserAction {
 
 	/**
 	 * 解封
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
