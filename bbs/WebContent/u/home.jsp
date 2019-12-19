@@ -76,11 +76,11 @@
 	font-size: 16px;
 	float: left;
 	border-bottom: 1px solid white;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 }
 
 .leftBodyNavStyle:hover {
-	background-color: #89ADCE;
+	background-color: #7A91A7;
 	color: white;
 }
 
@@ -91,9 +91,9 @@
 	font-size: 16px;
 	font-weight: bolder;
 	float: left;
-	color: white;
+	color: white;7A91A7
 	/* border-bottom: 1px solid white; */
-	background-color: #7EA5C6;
+	background-color: #;
 }
 
 .rightBody {
@@ -110,7 +110,7 @@
 }
 
 .butt {
-	background-color: #6699CC;
+	background-color: #99CCCC;
 	width: 100px;
 	height: 30px;
 	border: 0;
@@ -119,7 +119,7 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 
