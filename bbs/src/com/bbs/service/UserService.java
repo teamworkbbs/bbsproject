@@ -1,10 +1,7 @@
 package com.bbs.service;
 
-import java.util.List;
-
 import com.bbs.bean.Grades;
 import com.bbs.bean.Pages;
-import com.bbs.bean.Topics;
 import com.bbs.bean.Users;
 
 public interface UserService {
