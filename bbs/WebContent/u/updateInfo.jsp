@@ -26,7 +26,7 @@
 }
 
 .butt {
-	background-color: #6699CC;
+	background-color: #99CCCC;
 	width: 100px;
 	height: 30px;
 	border: 0;
@@ -35,12 +35,12 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 
 .file {
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 	height: 24px
 }
 </style>
