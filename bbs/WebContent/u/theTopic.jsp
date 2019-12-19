@@ -209,7 +209,7 @@
 	font-size: 14px;
 	font-family: 微软雅黑;
 	background-color: white;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #99CCCC;
 }
 
 .pageNav a button:HOVER {
@@ -217,8 +217,8 @@
 	height: 30px;
 	font-size: 14px;
 	font-family: 微软雅黑;
-	background-color: #A2C1DE;
-	border: 1px solid #C2D5E3;
+	background-color: #99CCCC;
+	border: 1px solid #CAD9E3;
 }
 
 .pageNav button {
@@ -227,11 +227,11 @@
 	font-size: 14px;
 	font-family: 微软雅黑;
 	background-color: #EFF4FB;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 }
 
 .butt {
-	background-color: #6699CC;
+	background-color: #99CCCC;
 	width: 100px;
 	height: 30px;
 	margin-right: 10px;
@@ -242,7 +242,7 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 
@@ -251,7 +251,7 @@
 	height: 40px;
 	line-height: 40px;
 	margin-top: 15px;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 	float: left;
 	text-align: left;
 }
@@ -261,7 +261,7 @@
 	width: 958px;
 	min-height: 300px;
 	background-color: #EFF4FB;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 }
 
 .newComment {
@@ -270,7 +270,7 @@
 	width: 960px;
 	height: 300px;
 	background-color: white;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 	border-right: none;
 	float: left;
 }
@@ -287,7 +287,7 @@
 	width: 958px;
 	/* 	min-height: 50px; */
 	background-color: #EFF4FB;
-	border: 1px solid #C2D5E3;
+	border: 1px solid #CAD9E3;
 	font-family: 微软雅黑;
 }
 
@@ -309,7 +309,7 @@
 }
 
 .commentEditLeftBlank {
-	border-top: 1px solid #C2D5E3;
+	border-top: 1px solid #CAD9E3;
 	width: 650px;
 	float: left;
 	height: 30px;
@@ -318,7 +318,7 @@
 }
 
 .commentEdit {
-	border-top: 1px solid #C2D5E3;
+	border-top: 1px solid #CAD9E3;
 	width: 100px;
 	float: left;
 	height: 30px;
@@ -338,7 +338,7 @@
 }
 
 .commentEdit input:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 </style>
