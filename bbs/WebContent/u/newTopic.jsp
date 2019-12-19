@@ -134,7 +134,7 @@
 	margin-left: 22px;
 	margin-top: 15px;
 	padding-left: 20px;
-	background-color: #A2C1DE;
+	background-color: #99CCCC;
 	font-family: 微软雅黑;
 	float: left;
 	text-align: left;
@@ -150,24 +150,24 @@
 }
 
 .newStyle table {
-	border-right: 1px solid #A9CBEE;
-	border-bottom: 1px solid #A9CBEE
+	border-right: 1px solid #99CCCC;
+	border-bottom: 1px solid #99CCCC
 }
 
 .newStyle table td,.newStyle table th {
 	height: 30px;
 	line-height: 30px;
-	border-left: 1px solid #A9CBEE;
-	border-top: 1px solid #A9CBEE;
+	border-left: 1px solid #99CCCC;
+	border-top: 1px solid #99CCCC;
 }
 
 .newStyle select {
 	font-family: 微软雅黑;
-	border: 1px solid #A9CBEE;
+	border: 1px solid 99CCCC;
 }
 
 .butt {
-	background-color: #6699CC;
+	background-color: #99CCCC;
 	width: 120px;
 	height: 30px;
 	margin-left: 10px;
@@ -179,7 +179,7 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
+	background-color: #7A91A7;
 	border: 0;
 }
 
