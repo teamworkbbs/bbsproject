@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.chen.util;
+package com.bbs.util;
 
 import java.io.IOException;
 import java.net.URLDecoder;
@@ -15,8 +15,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author chenguoji
- * @email chenguo_ji@163.com
+ * @author bbsguoji
+ * @email bbsguo_ji@163.com
  */
 public class UploadFilter implements Filter {
 
