@@ -9,11 +9,11 @@
 		<property name="newTime" column="new_time" type="java.sql.Timestamp"></property>
 		<property name="status" column="status" type="int"></property>
 		<!-- 多对一，多个发布的消息对应一个用户 -->
-		<many-to-one name="newsCommentUser" class="com.chen.bean.Users" lazy="proxy">
+		<many-to-one name="newsCommentUser" class="com.bbs.bean.Users" lazy="proxy">
 			<column name="news_comment_user_id" not-null="true"></column>
 		</many-to-one>
 		<!-- 多对一，多个消息对应一个帖子 -->
-		<many-to-one name="newsTopic" class="com.chen.bean.Topics" lazy="proxy" >
+		<many-to-one name="newsTopic" class="com.bbs.bean.Topics" lazy="proxy" >
 			<column name="news_topic_id" not-null="true"></column>
 		</many-to-one>
 	</class>

@@ -1,15 +1,12 @@
 /**
  * 
  */
-package com.chen.bean;
+package com.bbs.bean;
 
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author phn
- * 
- */
+
 public class Categorys {
 	private int id;
 	private String name;

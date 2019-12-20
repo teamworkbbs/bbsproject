@@ -5,10 +5,7 @@ package com.bbs.bean;
 
 import java.util.List;
 
-/**
- * @author phn
- * 
- */
+
 public class Pages {
 
 	private List<Topics> listTopics;

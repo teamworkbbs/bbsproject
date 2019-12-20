@@ -19,7 +19,7 @@
 		</property>
 
 		<!-- 多对一，多个类型对应一个类别 -->
-		<many-to-one name="typesCategory" class="com.chen.bean.Categorys"
+		<many-to-one name="typesCategory" class="com.bbs.bean.Categorys"
 			lazy="proxy">
 			<column name="types_category_id" not-null="true"></column>
 		</many-to-one>

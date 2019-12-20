@@ -7,10 +7,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author phn
- * 
- */
+
 public class Topics {
 	private int id;
 	private String title; // 标题
