@@ -26,11 +26,7 @@
 		style=" line-height:50px;"><font color="white">帖 子 管 理</font> </span>
 	</a>
 </div>
-<div class="links">
-	<a href="anno_ManageAll.action"><span
-		style=" line-height:50px;"><font color="white">公 告 管 理</font> </span>
-	</a>
-</div>
+
 <div class="links">
 	<a href="./index.jsp"><span style=" line-height:50px;"><font
 			color="white">返 回 首 页</font> </span> </a>
