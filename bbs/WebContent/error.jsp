@@ -43,7 +43,7 @@
 <body>
 <div style="background-color: #F5F5F5">
     <div class="top_nav">
-        <jsp:include page="/top.jsp"></jsp:include>
+        <jsp:include page="top.jsp"></jsp:include>
     </div>
     <div class="tbody" style="min-height:400px;background-color: #F5F5F5 ">
         <div style="height: 150px;width: 800px;"></div>
@@ -60,7 +60,7 @@
         </p>
     </div>
     <div class="copyRight">
-        <jsp:include page="/copyRight.jsp"></jsp:include>
+        <jsp:include page="copyRight.jsp"></jsp:include>
     </div>
 </div>
 </body>

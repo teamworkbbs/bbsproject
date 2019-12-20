@@ -154,7 +154,7 @@ a:hover {
 	height: 35px;
 	line-height: 30px;
 	margin-top: 15px;
-	background-color: 99CCCC;
+	background-color:#99CCCC;
 	float: left;
 	text-align: left;
 }
@@ -198,7 +198,7 @@ a:hover {
 <body>
 	<div class="background" align="center">
 		<div class="top_nav">
-			<jsp:include page="/top.jsp"></jsp:include>
+			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="leftBodyBlank"></div>
 		<div class="tbody">

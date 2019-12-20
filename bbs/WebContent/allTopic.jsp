@@ -190,7 +190,7 @@ a:hover {
 <body>
 	<div class="background" align="center">
 		<div class="top_nav">
-			<jsp:include page="/top.jsp"></jsp:include>
+			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="leftBodyBlank"></div>
 		<div class="tbody">

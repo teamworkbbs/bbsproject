@@ -29,7 +29,7 @@ if(self.location!=top.location) { top.location.href=self.location.href;}
 <body>
 	<div class="background">
 		<div class="top_nav">
-			<jsp:include page="/top.jsp"></jsp:include>
+			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="tbody">
 			<div class="login">
@@ -75,7 +75,7 @@ if(self.location!=top.location) { top.location.href=self.location.href;}
 			<div class="others"></div>
 		</div>
 		<div class="copyRight">
-			<jsp:include page="/copyRight.jsp"></jsp:include>
+			<jsp:include page="copyRight.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

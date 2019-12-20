@@ -97,7 +97,7 @@ body,html {
 	height: 30px;
 	font-size: 14px;
 	font-family: 微软雅黑;
-	background-color: #99CCCC
+	background-color: #99CCCC;
 	border: 1px solid silver;
 }
 
@@ -190,7 +190,7 @@ a:hover {
 <body>
 	<div class="background" align="center">
 		<div class="top_nav">
-			<jsp:include page="/top.jsp"></jsp:include>
+			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="leftBodyBlank"></div>
 		<div class="tbody">
@@ -424,7 +424,7 @@ a:hover {
 			</div>
 		</div>
 		<div class="copyRight">
-			<jsp:include page="/copyRight.jsp"></jsp:include>
+			<jsp:include page="copyRight.jsp"></jsp:include>
 		</div>
 	</div>
 

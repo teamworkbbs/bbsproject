@@ -47,7 +47,7 @@
 <body>
 	<div class="background">
 		<div class="topNav">
-			<jsp:include page="/top.jsp"></jsp:include>
+			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="leftBodyBlank"></div>
 		<div class="tBody" style="float: left;">
@@ -81,7 +81,7 @@
 			</div>
 		</div>
 		<div class="copyRight">
-			<jsp:include page="/copyRight.jsp"></jsp:include>
+			<jsp:include page="copyRight.jsp"></jsp:include>
 		</div>
 	</div>
 </body>
