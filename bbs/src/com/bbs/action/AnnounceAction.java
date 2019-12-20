@@ -11,7 +11,6 @@ import com.bbs.bean.Pages;
 import com.bbs.service.AnnounceService;
 
 /**
-
  * 论坛公告
  * 
  */
