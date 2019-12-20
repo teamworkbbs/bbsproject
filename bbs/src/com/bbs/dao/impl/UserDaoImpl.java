@@ -17,10 +17,6 @@ import com.bbs.bean.Topics;
 import com.bbs.bean.Users;
 import com.bbs.dao.UserDao;
 
-/**
- * @author chenguoji
- * @email chenguo_ji@163.com
- */
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 public class UserDaoImpl implements UserDao {
     private SessionFactory sessionFactory;
