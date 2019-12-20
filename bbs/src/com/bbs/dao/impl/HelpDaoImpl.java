@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.bbs.dao.impl;
 
@@ -20,46 +20,46 @@ import com.bbs.dao.HelpDao;
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 public class HelpDaoImpl implements HelpDao {
 
-	private SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
-	@Override
-	public List<Helps> getAll() {
-		Session session = sessionFactory.getCurrentSession();
-		String hql="from Helps hel order by hel.id asc";
-		List<Helps> listHelp = null;
-		try {
-			Query q = session.createQuery(hql);
-			listHelp = q.list();
-		} catch (HibernateException e) {
-			e.printStackTrace();
-		}
-		return listHelp;
-	}
+    @Override
+    public List<Helps> getAll() {
+        Session session = sessionFactory.getCurrentSession();
+        String hql="from Helps hel order by hel.id asc";
+        List<Helps> listHelp = null;
+        try {
+            Query q = session.createQuery(hql);
+            listHelp = q.list();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return listHelp;
+    }
 
-	@Override
-	public Helps find(int index) {
-		Session session = sessionFactory.getCurrentSession();
-		Helps thelp = (Helps) session.get(Helps.class, index);
-		return thelp;
-	}
+    @Override
+    public Helps find(int index) {
+        Session session = sessionFactory.getCurrentSession();
+        Helps thelp = (Helps) session.get(Helps.class, index);
+        return thelp;
+    }
 
-	@Override
-	public void add(Helps thelp) {
-		Session session = sessionFactory.getCurrentSession();
-		session.save(thelp);
-	}
-	@Override
-	public void update(Helps thelp) {
-		Session session = sessionFactory.getCurrentSession();
-		session.update(thelp);
-	}
+    @Override
+    public void add(Helps thelp) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(thelp);
+    }
+    @Override
+    public void update(Helps thelp) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(thelp);
+    }
 
 }

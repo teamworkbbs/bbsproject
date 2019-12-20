@@ -6,36 +6,27 @@
 	min-height: 700px;
 }
 
-.login {
+.register{
 	margin-top: 80px;
 	margin-left: 100px;
 	margin-bottom: 10px;
+	/* padding-top:30px; */
 	width: 800px;
 	height: 400px;
-	text-align: center;
 	background-color: #F8F8F8;
 }
-
-#uName,#uPass {
+#uName,#uNic,#uPass,#uRPass,#uEmail {
 	height: 30px;
 	width: 220px;
-	font-size: 17px;
 	padding-left: 6px;
+	font-size: 17px;
 	border: 1px solid #9ECFFE;
 }
 
+
 .butt {
 	background-color: #6699CC;
-	width: 95px;
-	height: 30px;
-	border: 0;
-	color: white;
-	font-size: 18px;
-}
-
-.but {
-	background-color: #6699CC;
-	width: 220px;
+	width: 80px;
 	height: 30px;
 	border: 0;
 	color: white;
@@ -43,11 +34,6 @@
 }
 
 .butt:hover {
-	background-color: #71AAE3;
-	border: 0;
-}
-
-.but:hover {
 	background-color: #71AAE3;
 	border: 0;
 }

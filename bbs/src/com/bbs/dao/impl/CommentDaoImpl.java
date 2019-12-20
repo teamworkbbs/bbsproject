@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.bbs.dao.impl;
 
@@ -12,44 +12,43 @@ import org.springframework.transaction.annotation.Transactional;
 import com.bbs.bean.Comments;
 import com.bbs.dao.CommentDao;
 
-
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 public class CommentDaoImpl implements CommentDao {
 
-	private SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
-	@Override
-	public boolean add(Comments comment) {
-		Session session = this.sessionFactory.getCurrentSession();
-		session.save(comment);
-		return true;
-	}
+    @Override
+    public boolean add(Comments comment) {
+        Session session = this.sessionFactory.getCurrentSession();
+        session.save(comment);
+        return true;
+    }
 
-	@Override
-	public void update(Comments comment) {
-		Session session = this.sessionFactory.getCurrentSession();
-		session.update(comment);
-	}
+    @Override
+    public void update(Comments comment) {
+        Session session = this.sessionFactory.getCurrentSession();
+        session.update(comment);
+    }
 
-	@Override
-	public Comments find(int id) {
-		Session session = this.sessionFactory.getCurrentSession();
-		Comments comment = (Comments) session.get(Comments.class, id);
-		return comment;
-	}
+    @Override
+    public Comments find(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        Comments comment = (Comments) session.get(Comments.class, id);
+        return comment;
+    }
 
-	@Override
-	public void delete(Comments comment) {
-		Session session = this.sessionFactory.getCurrentSession();
-		session.delete(comment);
-	}
+    @Override
+    public void delete(Comments comment) {
+        Session session = this.sessionFactory.getCurrentSession();
+        session.delete(comment);
+    }
 
 }
