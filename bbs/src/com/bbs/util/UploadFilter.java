@@ -14,10 +14,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author chenguoji
- * @email chenguo_ji@163.com
- */
+
 public class UploadFilter implements Filter {
 
 	public final static String DEFAULT_URI_ENCODE = "UTF-8";

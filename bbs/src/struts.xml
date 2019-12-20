@@ -6,8 +6,8 @@
 	<constant name="struts.i18n.encoding" value="UTF-8" /><!-- 指定编码方式 -->
 	<package name="json" namespace="/" extends="json-default,struts-default">
 		<interceptors>
-			<interceptor name="userAuthority" class="com.chen.interceptor.UserInterceptor"></interceptor>
-			<interceptor name="adminAuthority" class="com.chen.interceptor.AdminInterceptor"></interceptor>
+			<interceptor name="userAuthority" class="com.bbs.interceptor.UserInterceptor"></interceptor>
+			<interceptor name="adminAuthority" class="com.bbs.interceptor.AdminInterceptor"></interceptor>
 		</interceptors>
 		<global-results>
 			<result name="login">/login.jsp</result>
@@ -43,10 +43,10 @@
 	<package name="user" namespace="/" extends="struts-default">
 		<!-- 用户相关操作拦截器 -->
 		<interceptors>
-			<interceptor name="userAuthority" class="com.chen.interceptor.UserInterceptor"></interceptor>
-			<interceptor name="adminAuthority" class="com.chen.interceptor.AdminInterceptor"></interceptor>
+			<interceptor name="userAuthority" class="com.bbs.interceptor.UserInterceptor"></interceptor>
+			<interceptor name="adminAuthority" class="com.bbs.interceptor.AdminInterceptor"></interceptor>
 			<interceptor name="superAdminAuthority"
-				class="com.chen.interceptor.SuperAdminInterceptor"></interceptor>
+				class="com.bbs.interceptor.SuperAdminInterceptor"></interceptor>
 		</interceptors>
 		<global-results>
 			<result name="login">/login.jsp</result>
