@@ -21,10 +21,7 @@ import com.bbs.bean.Users;
 import com.bbs.service.UserService;
 import com.bbs.util.ResponseUtil;
 
-/**
- * @author chenguoji
- * @email chenguo_ji@163.com
- */
+
 public class UserAction {
 	private UserService userService;
 	private Users user;

@@ -11,7 +11,6 @@ import com.bbs.bean.Topics;
 import com.bbs.bean.Types;
 import com.bbs.service.CategoryService;
 
-
 public class CategoryAction {
 
 	private Categorys category;
