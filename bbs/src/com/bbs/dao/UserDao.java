@@ -8,7 +8,6 @@ import java.util.List;
 import com.bbs.bean.Topics;
 import com.bbs.bean.Users;
 
-
 public interface UserDao {
     /**
      * 添加用户
