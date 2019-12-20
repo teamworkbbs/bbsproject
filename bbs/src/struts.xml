@@ -45,8 +45,7 @@
 		<interceptors>
 			<interceptor name="userAuthority" class="com.bbs.interceptor.UserInterceptor"></interceptor>
 			<interceptor name="adminAuthority" class="com.bbs.interceptor.AdminInterceptor"></interceptor>
-			<interceptor name="superAdminAuthority"
-						 class="com.bbs.interceptor.SuperAdminInterceptor"></interceptor>
+			<interceptor name="superAdminAuthority" class="com.bbs.interceptor.SuperAdminInterceptor"></interceptor>
 		</interceptors>
 		<global-results>
 			<result name="login">/login.jsp</result>

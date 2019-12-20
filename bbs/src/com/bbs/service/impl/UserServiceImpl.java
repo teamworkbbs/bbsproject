@@ -19,7 +19,6 @@ import com.bbs.dao.TopicDao;
 import com.bbs.dao.UserDao;
 import com.bbs.service.UserService;
 
-
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
